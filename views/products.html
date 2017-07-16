@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+    <link rel="stylesheet" type="text/css" href="/public/custom.css">
   </head>
   <body>
     <div class='container'>
@@ -28,9 +29,15 @@
             <a href='/products/{{ product.id }}'>
               {{ product.name }}
             </a>
+            <span class="badge">{{ product.rating }}</span>
           </li>
         {% endfor %}
       </ul>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">App written  by Mike Kerslake with express, node and too many cups of coffee.</p>
+      </div>
+    </footer>
   </body>
 </html>

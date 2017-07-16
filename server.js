@@ -19,11 +19,12 @@ app.use(require('method-override')('_method'));
 
 //index route
 app.get('/', function(req, res, next){
-  res.render('index', {count: db.getProducts().length});
+  res.render('index', {product: db.getTopProduct()});
 });
 
 //all other routes
-app.use('/products', require('./routes/index'));
+app.use('/products', require('./routes'));
+app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(function(err, req, res, next){
   res.render('error', { error: err});
 });

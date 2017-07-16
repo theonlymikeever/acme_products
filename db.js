@@ -28,6 +28,12 @@ module.exports = {
       return product.id === id;
     })[0];
   },
+  //find highest rated product with reduce
+  getTopProduct: function(){
+    return products.reduce(function(prev, current) {
+      return (prev.rating > current.rating) ? prev : current;
+    }).name;
+  },
   createProduct: function(product){
     //error handling
     if(!product.name){

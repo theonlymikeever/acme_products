@@ -2,6 +2,7 @@
 var db = require('../db');
 var app = require('express').Router();
 
+//routes
 app.get('/', function(req, res, next){
   res.render('products', { products: db.getProducts() });
 });
