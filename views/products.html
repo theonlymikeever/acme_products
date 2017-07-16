@@ -6,8 +6,8 @@
     <div class='container'>
       <a href='/'>Home</a>
       <h1>Products</h1>
-<!--       <div class='well'>
-        <form action='/modules' method='POST'>
+      <div class='well'>
+        <form action='/products' method='POST'>
           <div class='form-group'>
             <input class='form-control' name='name' placeholder='name'/>
           </div>
@@ -15,13 +15,13 @@
             <input class='form-control' name='description' placeholder='description'/>
           </div>
           <div class='form-group'>
-            <input class='form-control' name='url' placeholder='url'/>
+            <input class='form-control' name='rating' placeholder='rating'/>
           </div>
           <div class='form-group'>
             <button class='btn btn-primary'>Save</button>
           </div>
         </form>
-      </div> -->
+      </div>
       <ul class='list-group'>
         {% for product in products %}
           <li class='list-group-item'>

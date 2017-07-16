@@ -4,17 +4,17 @@
   </head>
   <body>
     <div class='container'>
-      <a href='/products'>All Product</a>
+      <a href='/products'>Back to All Products</a>
       <h1>Product - {{ product.name }}</h1>
-<!--       <ul class='list-group'>
-        {% for product in products %}
-          <li class='list-group-item'>
-            <a href='/products/{{ product.id }}'>
-              {{ product.name }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
- -->    </div>
+      <div class="well">
+      <p>
+        <strong>Description:</strong> {{ product.description }}<br>
+        <strong>Rating:</strong> {{ product.rating }}</p>
+        <form action="/products/{{ product.id }}?_method=DELETE" method="POST">
+          <button class="btn btn-danger">Delete Product</button>
+        </form>
+      </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -21,6 +21,7 @@
     "bootstrap": "^3.3.7",
     "express": "^4.15.3",
     "method-override": "^2.3.9",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "volleyball": "^1.4.1"
   }
 }
