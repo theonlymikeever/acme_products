@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+      <a href='/'>Home</a>
+      <h1>Products</h1>
+<!--       <div class='well'>
+        <form action='/modules' method='POST'>
+          <div class='form-group'>
+            <input class='form-control' name='name' placeholder='name'/>
+          </div>
+          <div class='form-group'>
+            <input class='form-control' name='description' placeholder='description'/>
+          </div>
+          <div class='form-group'>
+            <input class='form-control' name='url' placeholder='url'/>
+          </div>
+          <div class='form-group'>
+            <button class='btn btn-primary'>Save</button>
+          </div>
+        </form>
+      </div> -->
+      <ul class='list-group'>
+        {% for product in products %}
+          <li class='list-group-item'>
+            <a href='/products/{{ product.id }}'>
+              {{ product.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
