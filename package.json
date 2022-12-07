@@ -19,7 +19,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "method-override": "^2.3.9",
     "swig": "^1.4.2",
     "volleyball": "^1.4.1"
